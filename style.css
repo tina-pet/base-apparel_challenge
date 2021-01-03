@@ -67,9 +67,9 @@ input {
   width: 100%;
   padding: 15px 30px;
   font-family: 'Josefin Sans', sans;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
-  color: hsl(0, 36%, 70%);
+  color: black;
   border: 1px solid hsl(0, 36%, 70%);
   border-radius: 30px;
   background-color: inherit;
@@ -84,6 +84,10 @@ input:focus {
 }
 input::placeholder {
   color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+.input-error {
+  border: 2px solid hsl(0, 93%, 68%);
 }
 .btn-submit {
   margin: 0;
@@ -100,6 +104,24 @@ input::placeholder {
 }
 .btn-submit:focus {
   outline: none;
+}
+.error-icon {
+  display: none;
+}
+.error-icon__show {
+  display: block;
+  position: absolute;
+  right: 110px;
+  bottom: 45px;
+}
+.error-message__hide {
+  display: none;
+}
+.error-message__show {
+  display: block;
+  color: hsl(0, 93%, 68%);
+  margin-left: 30px;
+  margin-top: 15px;
 }
 .hero-large {
   display: none;
