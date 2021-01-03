@@ -101,3 +101,58 @@ input::placeholder {
 .btn-submit:focus {
   outline: none;
 }
+.hero-large {
+  display: none;
+}
+footer {
+  margin: 30px 0 5px;
+}
+
+/* .................LARGE SCREEN................ */
+@media screen and (min-width: 768px) {
+  .hero-mobile {
+    display: none;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero-large {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: url('images/hero-desktop.jpg') center / cover no-repeat;
+    height: 100vh;
+    min-width: 40%;
+  }
+  main {
+    padding: 30px 10%;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    flex-basis: 60%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    position: relative;
+  }
+  .text-content {
+    text-align: left;
+    width: 460px;
+    margin-top: 80px;
+  }
+  .heading {
+    font-size: 58px;
+  }
+  .text-par {
+    font-size: 18px;
+    margin: 30px 0;
+  }
+  .btn-submit {
+    width: 75px;
+  }
+  footer {
+    position: absolute;
+    bottom: 10px;
+    left: 35%;
+  }
+}
