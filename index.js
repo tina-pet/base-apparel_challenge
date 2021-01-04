@@ -1,15 +1,12 @@
 'use strict';
 
 const inputElm = document.querySelector('input');
-let erMsgShown = false;
-const emailIsValid = (event) => {
+
+const regEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-z]{2,4}$/;
+const isValid = (event) => {
   const errorMsg = document.querySelector('.error-message__hide');
   const iconErr = document.querySelector('.error-icon');
-  if (
-    !inputElm.value.includes('@') ||
-    inputElm.value.includes(' ') ||
-    inputElm.value === ''
-  ) {
+  if (!regEmail.test(inputElm.value)) {
     event.preventDefault();
     errorMsg.classList.add('error-message__show');
     inputElm.classList.add('input-error');
@@ -18,4 +15,4 @@ const emailIsValid = (event) => {
 };
 
 const formSubmit = document.querySelector('form');
-formSubmit.addEventListener('submit', emailIsValid);
+formSubmit.addEventListener('submit', isValid);
